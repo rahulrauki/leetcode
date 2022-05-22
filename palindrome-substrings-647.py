@@ -1,3 +1,4 @@
+# Runtime 1162ms ; Memory 14MB
 class Solution:
     def countSubstrings(self, s: str) -> int:
         self.count = 0
