@@ -1,0 +1,47 @@
+This problem has multiple solutions using different implementations;
+
+Refer this link for submittions:
+Number of 1 Bits - LeetCode https://leetcode.com/problems/number-of-1-bits/submissions/ 
+
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        return "{0:b}".format(n).count("1")
+
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        return "{0:b}".format(int(n)).count("1")
+
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        self.count = 0
+        def rec(num):
+            if num>=1:
+                rec(num//2)
+            if (num%2==1): self.count+=1
+        rec(n)
+        return self.count
+
+var hammingWeight = function(n) {
+    let count =0;
+    for (let i of n.toString(2)){
+        if (i==1) count++;
+    }
+    return count
+};
+
+var hammingWeight = function(n) {
+    return n.toString(2).split("").filter(i => i==1).length;
+};
+
+var hammingWeight = function(n) {
+    let ones = n.toString(2).split("").filter(i => i==1);
+    return ones.length;
+};
+
+Time Submitted      Status      Runtime Memory  Language
+05/26/2022 22:25	Accepted	80 ms	13.8 MB	python3
+05/26/2022 22:23	Accepted	43 ms	13.8 MB	python3 95th percentile
+05/26/2022 22:21	Accepted	63 ms	14 MB	python3
+05/26/2022 22:03	Accepted	84 ms	43.6 MB	javascript
+05/26/2022 22:00	Accepted	76 ms	43.7 MB	javascript
+05/26/2022 21:59	Accepted	95 ms	43.4 MB	javascript
