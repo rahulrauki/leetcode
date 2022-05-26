@@ -1,2 +1,2 @@
 # leetcode
-Where I post my leetcode answers
+Where I post my leetcode answers and other questions i find
