@@ -1,3 +1,5 @@
+import heapq
+
 # O(nlgn) time
 def findKthLargest1(self, nums, k):
     return sorted(nums)[-k]
@@ -32,9 +34,9 @@ def findKthLargest4(self, nums, k):
     
 def findKthLargest(self, nums, k):
     heap = nums[:k]
-    heapify(heap)
+    heapq.heapify(heap)
     for n in nums[k:]:
-        heappushpop(heap, n)
+        heapq.heappushpop(heap, n)
     return heap[0]
 
 # O(k+(n-k)lgk) time, min-heap        
